@@ -82,7 +82,7 @@ if shared.VapeExecuted then
 			default = {Keybind = "", Selected = true}
 		},
 		RainbowSpeed = 0.6,
-		GUIKeybind = "RightShift",
+		GUIKeybind = "P",
 		CurrentProfile = "default",
 		KeybindCaptured = false,
 		PressedKeybindKey = "",
