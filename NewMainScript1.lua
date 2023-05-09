@@ -50,7 +50,7 @@ end
 
 if not shared.VapeDeveloper then 
 	local commit = "main"
-	for i,v in pairs(game:HttpGet("https://github.com/7GrandDadPGN/VapeV4ForRoblox"):split("\n")) do 
+	for i,v in pairs(game:HttpGet("https://github.com/imlivinginmyhouse/Bedwars"):split("\n")) do 
 		if v:find("commit") and v:find("fragment") then 
 			local str = v:split("/")[5]
 			commit = str:sub(0, str:find('"') - 1)
@@ -60,7 +60,7 @@ if not shared.VapeDeveloper then
 	if commit then
 		if isfolder("vape") then 
 			if ((not isfile("vape/commithash.txt")) or (readfile("vape/commithash.txt") ~= commit or commit == "main")) then
-				for i,v in pairs({"vape/Universal1.lua", "vape/MainScript.lua", "vape/GuiLibrary1.lua"}) do 
+				for i,v in pairs({"vape/Universal1.lua", "vape/MainScript1.lua", "vape/GuiLibrary1.lua"}) do 
 					if isfile(v) and readfile(v):find("--This watermark is used to delete the file if its cached, remove it to make the file persist after commits.") then
 						delfile(v)
 					end 
