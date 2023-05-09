@@ -37,7 +37,7 @@ local function vapeGithubRequest(scripturl)
 				displayErrorPopup("The connection to github is taking a while, Please be patient.")
 			end
 		end)
-		suc, res = pcall(function() return game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/"..readfile("vape/commithash.txt").."/"..scripturl, true) end)
+		suc, res = pcall(function() return game:HttpGet("https://raw.githubusercontent.com/imlivinginmyhouse/Bedwars/"..readfile("vape/commithash.txt").."/"..scripturl, true) end)
 		if not suc or res == "404: Not Found" then
 			displayErrorPopup("Failed to connect to github : vape/"..scripturl.." : "..res)
 			error(res)
@@ -60,20 +60,20 @@ if not shared.VapeDeveloper then
 	if commit then
 		if isfolder("vape") then 
 			if ((not isfile("vape/commithash.txt")) or (readfile("vape/commithash.txt") ~= commit or commit == "main")) then
-				for i,v in pairs({"vape/Universal1.lua", "vape/MainScript1.lua", "vape/GuiLibrary1.lua"}) do 
+				for i,v in pairs({"vape/Universal1.lua", "vape/MainScript.lua", "vape/GuiLibrary1.lua"}) do 
 					if isfile(v) and readfile(v):find("--This watermark is used to delete the file if its cached, remove it to make the file persist after commits.") then
 						delfile(v)
 					end 
 				end
-				if isfolder("vape/CustomModules1") then 
-					for i,v in pairs(listfiles("vape/CustomModules1")) do 
+				if isfolder("vape/CustomModules") then 
+					for i,v in pairs(listfiles("vape/CustomModules")) do 
 						if isfile(v) and readfile(v):find("--This watermark is used to delete the file if its cached, remove it to make the file persist after commits.") then
 							delfile(v)
 						end 
 					end
 				end
-				if isfolder("vape/Libraries1") then 
-					for i,v in pairs(listfiles("vape/Libraries1")) do 
+				if isfolder("vape/Libraries") then 
+					for i,v in pairs(listfiles("vape/Libraries")) do 
 						if isfile(v) and readfile(v):find("--This watermark is used to delete the file if its cached, remove it to make the file persist after commits.") then
 							delfile(v)
 						end 
